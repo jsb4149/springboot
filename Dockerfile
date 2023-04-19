@@ -1,4 +1,5 @@
 FROM openjdk:17
-ADD target/springboot.jar springboot.jar
+COPY  target/SampleHelloworld-0.0.1-SNAPSHOT.jar  /usr/app/
+WORKDIR /usr/app/
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "springboot.jar"]
+ENTRYPOINT ["java", "-jar", "SampleHelloworld-0.0.1-SNAPSHOT.jar"]
